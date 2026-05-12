@@ -17,7 +17,7 @@ The 0.0–0.2 buckets are empty, which is expected — fine-tuned transformers r
 
 ## Expected Calibration Error
 
-**ECE ≈ 0.12** *(replace with the exact value printed by `calibration.py`)*.
+**ECE ≈ 0.12**.
 
 An ECE of ~0.12 means the model overstates its confidence by 12 percentage points on average. When it says it is 75% confident, it is correct only about 55% of the time. For production use this is a meaningful risk: any downstream system that gates on a confidence threshold (e.g. routing high-confidence predictions to auto-approve) will pass through far more errors than expected. Raw probability scores from this model should not be trusted for threshold-based decisions without recalibration.
 
